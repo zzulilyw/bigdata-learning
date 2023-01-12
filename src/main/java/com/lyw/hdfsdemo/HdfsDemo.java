@@ -1,4 +1,4 @@
-package com.lyw;
+package com.lyw.hdfsdemo;
 
 
 import org.apache.hadoop.conf.Configuration;
