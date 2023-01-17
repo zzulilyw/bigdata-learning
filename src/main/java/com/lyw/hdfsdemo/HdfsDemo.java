@@ -21,7 +21,7 @@ public class HdfsDemo {
     @Before
     public void connectionToHdfs() throws IOException {
         // 设置执行用户
-        System.setProperty("HADOOP_USER_NAME","hadoop");
+//        System.setProperty("HADOOP_USER_NAME","hadoop");
         conf = new Configuration();
         // 单点配置
 //        conf.set("fs.defaultFS","hdfs://ds-bigdata-002:8020");
@@ -44,6 +44,11 @@ public class HdfsDemo {
 //        // 创建文件夹
 //        fs.mkdirs(new Path("/tmp/liuyawei1208/test0110"));
 //    }
+
+    @Test
+    public void deleteOutput() throws IOException {
+        fs.delete(new Path("/tmp/liuyawei1208/output"));
+    }
 
     @Test
     public void mkdir() throws IOException {
